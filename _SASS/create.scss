@@ -1,0 +1,205 @@
+@import 'variables';
+
+/****************************************************************/
+/* Sign Up (create.php) */
+/****************************************************************/
+
+body, html{
+	height:100%;
+	background-color:$neutral;
+}
+
+.valign-wrapper{
+	display: inherit;
+}
+
+.centerContent{
+	width:100%;
+	margin:auto;
+}
+
+#boxWrap{ 
+	height:100%;
+	margin-bottom:0px;
+
+	#box{
+		background-color:$neutral;
+		padding: 0 0 0 0;
+		display:inline-block;
+		height:100%;
+
+		#boxHeader{
+			background-color:$primary;
+			padding:45px 35px 45px 35px;
+			color:$textIcons;
+			margin-bottom:0;
+
+			.centerContent{
+				position:relative;
+
+				h5, p{
+					margin:0;
+					padding:0;
+				}
+
+				h5{
+					font-size:18px;
+				}
+
+				p{
+					color:$primaryLight;
+				}
+
+				img, #boxHeaderPP{
+					width:100px;
+					height:100px;
+					background-color:$textIcons;
+					border-radius:50%;
+					position:absolute;
+					right:0px;
+					bottom:-95px;
+					overflow:hidden;
+				}
+
+				#boxHeaderPP{
+					text-align:center;
+					line-height:225px;
+
+					i{
+						font-size:125px;
+						color:$background;
+					}
+				}
+			}
+		}
+
+		#boxContent{
+			height:auto;
+			padding:25px;
+
+			.input-field{
+				margin: 0 0 0px 0;
+			}
+
+			.licenseLink{
+				text-decoration:underline;
+				color:$secondaryText;
+				font-weight:600;
+			}
+		}
+		
+		#boxAction{
+			position:relative;
+
+			.btn-floating{
+				position:fixed;
+				right:15px;
+				bottom:15px;
+			}
+
+			span{
+				font-size:12px;
+				cursor:pointer;	
+				padding:15px 35px 0 0;
+				display:block;
+				float:right;
+
+				a{
+					color:$primaryLight;
+				}
+				.modal-trigger{
+					color:$divider;
+				} 
+			}	
+		}
+
+		#boxBottom{
+			font-size:12px;
+			color:$divider;
+			cursor:pointer;	
+			padding:0 15px 15px 15px;
+
+			a{
+				color:$primary;
+			}
+			.modal-trigger{
+				color:$secondaryText;
+			} 
+		}
+		&.z-depth-2{
+			box-shadow:none;
+		}	
+	}	
+}
+
+/* Mobile */
+@media only screen and (min-width : 0px) {	
+	// body{background:rgba(0,0,255,0.2);}
+}
+
+/* Tablet */
+@media only screen and (min-width : 600px) {	
+	// body{background:rgba(0,255,0,0.2);}
+	
+	.centerContent{
+		width:400px;
+		margin:auto;
+	}
+
+	#boxWrap{	
+
+		#box{
+			width:100%;
+			margin:0;
+
+			#boxBottom{
+				padding-left:0px;
+			}	
+		}
+	}
+}
+
+/* Desktop */
+@media only screen and (min-width : 992px) {
+	// body{background:rgba(255,0,0,0.2);}
+
+	body, html{
+		height:100%;
+		background-color:$background;
+	}
+		
+	.valign-wrapper{
+		display: flex;
+	}
+
+	.centerContent{
+		width:100%;
+		margin:auto;
+	}
+
+	#boxWrap{
+		height:100vh;
+
+		#box{
+			width:400px;
+			height:auto;
+			margin:auto;
+
+			#boxAction{
+
+				.btn-floating{
+					position:absolute;
+					right:-27px;
+					top:-50px;
+				}
+			}
+			#boxBottom{
+				padding-left:15px;
+			}
+
+			&.z-depth-2{
+				box-shadow:0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+			}	
+		}
+	}
+}

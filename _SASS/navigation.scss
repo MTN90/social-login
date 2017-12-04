@@ -1,0 +1,57 @@
+@import 'variables';
+
+body {
+  padding-left: 300px;
+}
+
+nav .button-collapse{
+	margin:0;
+}
+
+nav{
+	padding:0 5px 0 5px;
+}
+
+#slide-out{
+
+	transform: translateX(0%);
+
+	li{
+		.userView{
+			
+			.background{
+
+				background-image:url('../img/sideNav.jpg');
+				background-position:center;
+				background-size:cover;
+			}
+
+			a{
+
+				.ppCircle{
+					width:60px;
+					height:60px;
+					background-color:$neutral;
+					text-align:center;
+					line-height:120px;
+					overflow:hidden;
+
+					.ppUser{
+						font-size:70px;
+						color:$primaryLight;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 992px) {
+  body {
+    padding-left: 0;
+  }
+
+  #slide-out{
+		transform: translateX(-100%);
+	}
+}

@@ -1,0 +1,202 @@
+@import 'variables';
+
+
+*{
+	box-sizing:border-box;
+	font-family:'Roboto';
+}
+
+body{
+	background-color:$background;
+	margin:0px;
+}	
+
+.dissaper{
+	position:fixed;
+	opacity:0;
+	pointer-events:none;
+}
+
+.clearBoth{
+	clear:both;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+/****************************************************************/
+/* Social media btns */
+/****************************************************************/
+
+#fb-login{
+	background-color: #4267B2;
+	color: #fff;
+}
+
+#gl-login{
+	background-color: #dd4b39;
+	color: #fff;
+	position:relative;
+	overflow:hidden;
+
+	div{
+		width: 100%;
+		height: 50px;
+		top:0;
+		position:absolute;
+
+		.abcRioButton{
+			width:100% !important;
+			height:100% !important;
+			background-color:transparent !important;
+			border-radius:5px;
+
+			.abcRioButtonContentWrapper{
+				background-color:transparent !important;
+				opacity:0;
+
+				.abcRioButtonIcon{
+					display:none;
+				}
+			}
+		}
+	}
+}
+#li-login{
+	background-color: #0e76a8;
+	color: #fff;
+}
+
+/****************************************************************/
+/* Materialize Color overwrite */
+/****************************************************************/
+
+#boxWrap{
+
+	#box{
+		
+		// Input fields
+		.input-field input:focus + label {
+			color:$primary;
+		}
+		.active{
+			// color:$primary;
+		}
+		.input-field input:focus {
+			border-bottom: 1px solid $primary;
+			box-shadow: 0 1px 0 0 $primary;
+		}
+		input.valid {
+			border-bottom: 1px solid $divider;
+			box-shadow: 0 0px 0 0 $divider;
+		}
+		input.invalid {
+			border-bottom: 1px solid tomato;
+			box-shadow: 0 1px 0 0 tomato;
+		}
+
+		// Selectbox
+		.dropdown-content li>a, .dropdown-content li>span{
+			color:$primary;
+		}
+		.dropdown-content .disabled>span{
+			color:$divider;
+		}
+
+		// Switch (checkbox)
+		.switch label input[type=checkbox]:checked+.lever:after {
+		  background-color: $primary;
+		}
+		.switch label input[type=checkbox]:checked+.lever {
+		  background-color: $primaryLight;
+		}
+
+		// Datepicker
+		.picker__date-display {
+		  background-color:$primary;
+		}
+		.picker__weekday-display {
+		  background-color:$primaryDark;
+		}
+		.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+		  background-color:$primary;
+		  color:$textIcons;
+		}
+		.picker__day--today{
+			color:$primary;
+		}
+		.picker__header{
+			.picker__nav--prev:hover, .picker__nav--next:hover{
+				background-color:$primaryLight;
+			}
+		}
+		.picker__footer {
+			.picker__today, .picker__close{
+				color:$primary;	
+			}
+		}
+	}
+}
+/****************************************************************/
+/* Error */
+/****************************************************************/
+
+#error{
+	background-color:#f44336;
+	width:100%;
+	height:100vh;
+	margin:auto;
+	color:#fff;
+	text-align:center;
+	
+	div{
+		display:inline-block;
+		margin-top:35vh;
+	
+		h1{
+			font-weight:normal;
+			margin:0px;
+			padding:0px;
+		}
+
+		h2{
+			font-weight:normal;
+			font-size:16px;
+		}
+
+		h3{
+			font-weight:normal;
+			font-size:14px;
+
+			a{
+				color:#fff;
+			}
+		}
+	}
+}
+
+/* Mobile */
+@media only screen and (min-width : 0px) {	
+	// body{background:rgba(0,0,255,0.2);}
+	
+	.toast.rounded{
+		border-radius:2px;
+	}
+}
+
+/* Tablet */
+@media only screen and (min-width : 600px) {	
+	// body{background:rgba(0,255,0,0.2);}
+	
+	.toast.rounded{
+		border-radius:25px;
+	}
+
+}
+
+/* Desktop */
+@media only screen and (min-width : 992px) {
+	// body{background:rgba(255,0,0,0.2);}
+
+}

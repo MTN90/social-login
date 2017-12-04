@@ -1,0 +1,63 @@
+@import 'variables';
+
+.log{
+
+	.transparent{
+		box-shadow:none;
+		line-height:50px;
+		height:75px;
+	}
+}
+
+.ppCircle{
+	width:40px;
+	height:40px;
+	background-color:$neutral;
+	text-align:center;
+	line-height:75px;
+	overflow:hidden;
+
+	.ppUser{
+		font-size:45px;
+		color:$divider;
+	}
+}
+
+/* Mobile */
+@media only screen and (min-width : 0px) {	
+	// body{background:rgba(0,0,255,0.2);}
+}
+
+/* Tablet */
+@media only screen and (min-width : 600px) {	
+	// body{background:rgba(0,255,0,0.2);}
+	  body {
+	    padding-left: 0;
+	  }
+
+  	#slide-out{
+		transform: translateX(-100%);
+	}
+}
+
+/* Desktop */
+@media only screen and (min-width : 992px) {
+	// body{background:rgba(255,0,0,0.2);}
+
+	.log{
+		width:100% !important;
+		margin:0 0 10px 0;
+
+		.card-panel{
+			max-width:400px;
+			min-width:400px;
+			margin:auto;
+		}	
+
+		.transparent{
+			box-shadow:none;
+			line-height:120px;
+			height:150px;
+		}
+	}
+}

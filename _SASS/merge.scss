@@ -1,0 +1,217 @@
+@import 'variables';
+
+/****************************************************************/
+/* Merge (merge.php) */
+/****************************************************************/
+
+body, html{
+	height:100%;
+	background-color:$neutral;
+}
+
+.valign-wrapper{
+	display: inherit;
+}
+
+.centerContent{
+	width:100%;
+	height:100%;
+	margin:auto;
+}
+
+#boxWrap{ 
+	height:100%;
+	margin-bottom:0px;
+
+	#box{
+		background-color:$neutral;
+		padding: 0 0 0 0;
+		display:inline-block;
+		height:100%;
+
+		#boxHeader{
+			background-color:$primary;
+			padding:45px 35px 45px 35px;
+			color:$textIcons;
+			margin-bottom:0;
+
+			h5, p{
+				margin:0;
+				padding:0;
+			}
+
+			h5{
+				font-size:18px;
+			}
+
+			p{
+				color:$primaryLight;
+			}
+		}
+
+		#boxMerge{
+			position:relative;
+			padding:25px 25px 0 25px;
+
+			.centerContent{
+				height:100%;
+
+				.col.s5{
+
+					img{
+						max-width:100px;
+					}
+				}
+				
+				.col.s2{
+					
+					span{
+						position:absolute;
+						left:50%;
+						top:50%;
+						margin-top:-10px;
+						margin-left:-19px;
+					}
+				}
+
+				 #boxMerge-male, #boxMerge-female{
+					width:100px;
+					height:100px;
+					background-color:$textIcons;
+					border-radius:50%;
+					overflow:hidden;
+					text-align:center;
+					line-height:225px;
+
+					i{
+						font-size:125px;
+						color:$background;
+					}
+				}
+
+				#boxMerge-male{
+
+					i{
+						color:$primaryLight;
+					}
+				}
+
+				#boxMerge-female{
+
+					i{
+						color:$accent;
+					}
+				}
+			}
+		}
+
+		#boxContent{
+			height:200px;
+			padding:35px 25px 25px 25px;
+
+			.input-field{
+				margin: 0 0 0px 0;
+			}
+		}
+		
+		#boxAction{
+			position:relative;
+
+			.btn-floating{
+				position:fixed;
+				right:15px;
+				bottom:15px;
+			}	
+		}
+
+		#boxBottom{
+			font-size:12px;
+			color:$divider;
+			cursor:pointer;	
+			padding-left:15px;
+			margin-bottom:10px;
+
+			a{
+				color:$primary;
+			}
+			.modal-trigger{
+				color:$secondaryText;
+			}
+		}
+		
+		&.z-depth-2{
+			box-shadow:none;
+		}	
+	}	
+}
+
+/* Mobile */
+@media only screen and (min-width : 0px) {	
+	// body{background:rgba(0,0,255,0.2);}
+}
+
+/* Tablet */
+@media only screen and (min-width : 600px) {	
+	// body{background:rgba(0,255,0,0.2);}
+	
+	.centerContent{
+		width:400px;
+		margin:auto;
+	}
+
+	#boxWrap{	
+
+		#box{
+			width:100%;
+			margin:0;
+
+			#boxBottom{
+				padding-left:0px;
+			}	
+		}
+	}
+}
+
+/* Desktop */
+@media only screen and (min-width : 992px) {
+	// body{background:rgba(255,0,0,0.2);}
+	
+	body, html{
+		height:100%;
+		background-color:$background;
+	}
+
+	.valign-wrapper{
+		display: flex;
+	}
+
+	.centerContent{
+		width:100%;
+		margin:auto;
+	}
+
+	#boxWrap{
+
+		#box{
+			width:400px;
+			height:auto;
+			margin:auto;
+
+			#boxAction{
+
+				.btn-floating{
+					position:absolute;
+					right:-27px;
+					top:-50px;
+				}
+			}
+			#boxBottom{
+				padding-left:15px;
+			}	
+
+			&.z-depth-2{
+				box-shadow:0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+			}
+		}
+	}
+}
